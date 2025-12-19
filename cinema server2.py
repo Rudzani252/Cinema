@@ -10,7 +10,7 @@ import threading
 def handle_request(data, ):
    
     connection = mysql.connector.connect(host="127.0.0.1", port= "3306 ",user="root",
-                                         password= "R25190412r" ,database="Cinema1")
+                                         password= "" ,database="Cinema1")
 
     try:
         request = json.loads(data)
@@ -85,6 +85,7 @@ def server():
     while True: 
         conn, address = s.accept() 
         threading.Thread(target=client_thread, args=(conn, address)).start() 
+
 
 
 server()
