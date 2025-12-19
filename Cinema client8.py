@@ -104,7 +104,7 @@ class Cinema(Tk):
 
 
     con = mysql.connector.connect(host="127.0.0.1", port="3306 ", user="root",
-                                      password="R25190412r", database="Cinema1")
+                                      password="", database="Cinema1")
     cur = con.cursor()
 
     def add_movie(self):
@@ -322,6 +322,7 @@ class Cinema(Tk):
 if __name__ == '__main__':
     app = Cinema()
     app.mainloop()
+
 
 
 
