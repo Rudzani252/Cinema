@@ -14,11 +14,11 @@ A Python-based client–server cinema management system that enables users to re
 - 
 #Architecture:
 Tkinter Client
-│
+-
 TCP Socket + JSON
-│
+-
 Python Server
-│
+-
 MySQL Database
 
 #Server:
