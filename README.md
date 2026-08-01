@@ -2,7 +2,7 @@ Cinema Client–Server Application
 
 A Python-based client–server cinema management system that enables users to register, log in, browse currently showing movies, purchase movie tickets, and manage movie records through a Tkinter graphical user interface. The application uses TCP sockets and JSON for client-server communication, with a MySQL database for movie and sales data and SQLite for user authentication.
 
-#Features:
+## Features:
 - User registration and login
 - Secure password hashing using bcrypt
 - Browse currently showing movies
@@ -21,18 +21,18 @@ Python Server
 ->
 MySQL Database
 
-#Server:
+## Server:
 The server listens for incoming TCP socket connections from clients. It processes JSON requests, performs the required database operations, and returns responses to the client.
-Responsibilities:
+# Responsibilities:
 - Accept client connections
 - Process JSON requests
 - Manage movie records
 - Process ticket purchases
 - Communicate with the MySQL database
 
-#Client:
+## Client:
 The client is a Tkinter-based graphical application that allows users to interact with the cinema management system.
-Users can:
+# Users can:
 - Register an account
 - Log in securely
 - View available movies
@@ -41,22 +41,22 @@ Users can:
 - Update movie information
 - Delete movies
   
-#Authentication System:
+## Authentication System:
 User credentials are stored in a SQLite database (users.db). Security features include:
 
 - Passwords are securely hashed using bcrypt.
 - Username and password validation
 
-#Database:
-MySQL Stores:
+## Database:
+# MySQL Stores:
 - Movie information
 - Ticket sales records
 
-SQLite Stores:
+# SQLite Stores:
 - User accounts
 - Hashed passwords
 
-#Technical tools and libraries:
+## Technical tools and libraries:
 - Python 3
 - TCP socket
 - JSON
@@ -67,8 +67,8 @@ SQLite Stores:
 - threading
 
 
-#Running instructions: Prerequisites: pip install mysql-connector-python bcrypt
-Database Setup:
+## Running instructions: Prerequisites: pip install mysql-connector-python bcrypt
+# Database Setup:
 1. Create a new MySQL database.
 2. Open the provided SQL file and execute it to create all the required tables and populate the database.
 3. Open the MySQL_config.py and update the MySQL connection details. Update the following values:
