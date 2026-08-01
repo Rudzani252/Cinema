@@ -1,5 +1,5 @@
-Cinema Client–Server Application
-
+# Cinema Client–Server Application
+## Overview 
 A Python-based client–server cinema management system that enables users to register, log in, browse currently showing movies, purchase movie tickets, and manage movie records through a Tkinter graphical user interface. The application uses TCP sockets and JSON for client-server communication, with a MySQL database for movie and sales data and SQLite for user authentication.
 
 ## Features:
@@ -12,7 +12,7 @@ A Python-based client–server cinema management system that enables users to re
 - JSON-based request and response handling
 - MySQL database integration for movies and sales records
 - 
-#Architecture:
+## Architecture:
 Tkinter Client
 ->
 TCP Socket + JSON
