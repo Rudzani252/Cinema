@@ -161,6 +161,7 @@ class Cinema(Tk):
 
     def update(self):
         try:
+            movie_id = int(self.entryMovie_id.get())
             title = self.entryTitle.get()
             cinema_room = int(self.entryRoom.get())
             release_date = self.entryRel_date.get()
@@ -171,13 +172,13 @@ class Cinema(Tk):
             print("Invalid Input")
 
         try:
-            if not title or not cinema_room or not release_date or not end_date or not tickets_available or not ticket_price:
+            if not movie_id or not title or not cinema_room or not release_date or not end_date or not tickets_available or not ticket_price:
                 print("error, enter invalid inputs")
                 return
             else:
                 response = self.send_request(
                     {"action": "update_movie",
-                     "data": { "title": title,"cinema_room": cinema_room, "release_date": release_date,
+                     "data": { "movie_id": movie_id,"title": title,"cinema_room": cinema_room, "release_date": release_date,
                               "end_date": end_date, "tickets_available": tickets_available,
                               "ticket_price": ticket_price}})
                 if response["status"] == "success":
@@ -296,6 +297,8 @@ class Cinema(Tk):
         con = mysql.connector.connect(host="127.0.0.1", user="root", password=
                 "R25190412r", database="Cinema1")
         cur = con.cursor()
+        Label(self.cinema_frame,text="Movie ID \n(for updates)").place(x=0, y=35)
+        Label(self.cinema_frame,text="Title:").place(x=0, y=75)
         Label(self.cinema_frame,text="Title:").place(x=0, y=75)
         Label(self.cinema_frame,text="Room (1-7):").place(x=0, y=100)
         Label(self.cinema_frame,text="Release Date:").place(x=0, y=125)
@@ -304,7 +307,8 @@ class Cinema(Tk):
         Label(self.cinema_frame,text="Ticket Price").place(x=0, y=200)
 
         # entry field
-    
+        self.entryMovie_id= Entry(self.cinema_frame)
+        self.entryMovie_id.place(x=85, y=50)
         self.entryTitle= Entry(self.cinema_frame)
         self.entryTitle.place(x=85, y=75)
         self.entryRoom = Entry(self.cinema_frame)
