@@ -8,7 +8,7 @@ import bcrypt
 import re
 import sqlite3
 import socket
-
+from MySQL_config import *
 
 
 class Cinema(Tk):
@@ -294,8 +294,8 @@ class Cinema(Tk):
         
 
     def create_cinema(self):
-        con = mysql.connector.connect(host="127.0.0.1", user="root", password=
-                "R25190412r", database="Cinema1")
+        con = mysql.connector.connect(host=HOST, user=USER, password=
+                PASSWORD, database= DATABASE)
         cur = con.cursor()
         Label(self.cinema_frame,text="Movie ID \n(for updates)").place(x=0, y=35)
         Label(self.cinema_frame,text="Title:").place(x=0, y=75)
