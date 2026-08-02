@@ -34,8 +34,8 @@ def handle_request(data, ):
 
 
         elif action == "update_movie":
-            old_title = payload.get("old_title")
-
+            
+            movie_id = payload.get("movie_id")
             title = payload.get("title")
             cinema_room = payload.get("cinema_room")
             release_date = payload.get("release_date")
@@ -43,8 +43,8 @@ def handle_request(data, ):
             tickets_available = payload.get("tickets_available")
             ticket_price = payload.get("ticket_price")
 
-            cursor.execute("UPDATE Movies SET  title = %s,cinema_room= %s,release_date= %s, end_date= %s, tickets_available = %s, ticket_price = %s WHERE title = %s """,(
-                 title, cinema_room, release_date, end_date, tickets_available, ticket_price, old_title))
+            cursor.execute("UPDATE Movies SET  title = %s,cinema_room= %s,release_date= %s, end_date= %s, tickets_available = %s, ticket_price = %s WHERE movie_id = %s """,(
+                 title, cinema_room, release_date, end_date, tickets_available, ticket_price, movie_id))
             connection.commit()
             return json.dumps({"status": "success",
                                "message": "Movie is updated."})
