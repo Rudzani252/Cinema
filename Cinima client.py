@@ -101,6 +101,7 @@ class Cinema(Tk):
 
             if bcrypt.checkpw(password.encode("utf-8"),stored_password):
                 messagebox.showerror("Success","Logged in successfully")
+                 self.show_frame(self.cinema_frame)
                 return True
             else:
                 messagebox.showerror(
@@ -306,10 +307,7 @@ class Cinema(Tk):
                font=("Segoe UI", 10, "bold"), bg=card, fg=accent,
                activebackground=card, activeforeground=white, relief="flat", bd=0,
                cursor="hand2").place(x=54, y=411, width=206, height=30)
-        Button(panel, text="Next →", command=lambda: self.show_frame(self.cinema_frame),
-               font=("Segoe UI", 10), bg=card, fg=muted,
-               activebackground=card, activeforeground=white, relief="flat", bd=0,
-               cursor="hand2").place(x=345, y=411, width=120, height=30)
+        
 
     def create_register(self):
         bg = "#F4F5F7"
