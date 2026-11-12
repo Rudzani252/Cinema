@@ -80,14 +80,7 @@ DATABASE = "cinema_db"
 4. Run the Cinema server.py
 5. In a new terminal run Cinema client.py
 
-Login screenshot: 
-<img width="1746" height="788" alt="image" src="https://github.com/user-attachments/assets/14a33497-30da-4af4-943a-4f4945bf7b38" />
 
-Register screenshot: 
-<img width="1755" height="796" alt="image" src="https://github.com/user-attachments/assets/f59ddd46-0e72-4eb3-bd33-704a476340ef" />
-
-Cinema management system screenshot: 
-<img width="1752" height="791" alt="image" src="https://github.com/user-attachments/assets/219fa3b7-c146-489c-9b13-0037cabeaca2" />
 
 
 
